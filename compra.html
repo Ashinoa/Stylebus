@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/index.css'> 
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <div id="barra">
+                <ul class="barraNav">
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+            <br>
+        </div>
+    </header>
+    <h1 id="titulo">Finaliza tu compra</h1>
+    <form id="form-registro">
+        <div class="grid" id="rcontenedor-formulario-reserva" >
+
+            <div id="seleccion-formas-de-pago">
+                <label for="validation-formas-de-pago">Forma de pago</label>
+                <select class="form-select" id="formas-pago" required>
+                    <option value="Tarjeta de credito">Tarjeta de credito</option>
+                    <option value="CBU/CVU">CBU/CVU</option>
+                </select>
+            </div>
+            <br>
+            <div id="cupones">
+                <div>
+                    <label for="validation-formas-de-pago"><input type="checkbox" class="checkbox-iv" id="checkbox-cupon" onchange="habilitarCheckCupon()">Cupones</label>
+                </div>
+                <br>
+                <div class="seleccion-cupones"id ="content" style="display: none;">
+                    <label for="validation-formas-de-pago"></label>
+                    <select class="form-select" id="lista-cupones" required>
+                            <option value="cupon1">000001, $5000</option>
+                       
+                    </select>
+                </div>
+            </div>
+            <br>
+            <input type="button" onclick="comprar()" class="boton" value="Comprar" /> 
+
+         </div>
+
+    </form>
+            <script src="js/reserva.js"></script>
+            <script src="js/compra.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+</body>
+</html>
